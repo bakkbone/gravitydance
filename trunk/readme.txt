@@ -26,7 +26,8 @@ Provides a Breakdance element for your Gravity Forms.
 == Frequently Asked Questions ==
 = What plugins do I need? =
 
-* [WooCommerce](https://wordpress.org/plugins/woocommerce/)
+* [Gravity Forms](https://rocketgenius.pxf.io/bakkbone) _(affiliate link)_
+* [Breakdance](https://breakdance.com/ref/357/) _(affiliate link)_
 
 == Screenshots ==
 
