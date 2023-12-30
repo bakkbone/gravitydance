@@ -5,7 +5,7 @@ namespace Gravitydance;
 class Loader {
 	
 	function __construct() {
-		add_filter( 'breakdance_reusable_dependencies_urls', [$this, 'gravitydance_gf_styles'], PHP_INT_MAX );
+		//add_filter( 'breakdance_reusable_dependencies_urls', [$this, 'gravitydance_gf_styles'], PHP_INT_MAX );
 		add_action( 'wp_head', [$this, 'head'] );
 	}
 	

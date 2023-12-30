@@ -1,1 +1,33 @@
-%%SELECTOR%% { }
+%%SELECTOR%% {
+  {{ macros.size(design.wrapper.size) }}
+  {{ macros.spacing_all(design.wrapper.spacing) }}
+  {{ macros.background(design.wrapper.background) }}
+  {{ macros.borders(design.wrapper.borders) }}
+  {{ macros.simpleLayout(design.wrapper.layout, breakpoint) }}
+  text-align: {{ design.wrapper.default_alignment | default('left') }};
+}
+
+%%SELECTOR%% .gform_title {
+  {{ macros.typography(design.header.title, globalSettings) }}
+}
+
+%%SELECTOR%% .gform_title:hover {
+  {{ macros.typographyWithHoverableColorAndEffects(design.header.title) }}
+}
+
+%%SELECTOR%% .gform_description {
+  {{ macros.typography(design.header.description, globalSettings) }}
+}
+
+%%SELECTOR%% .gform_description:hover {
+  {{ macros.typographyWithHoverableColorAndEffects(design.header.description) }}
+}
+
+%%SELECTOR%% .gfield_required, %%SELECTOR%% .gform_required_legend .gfield_required {
+  {{ macros.typography(design.required_indicators.indicator, globalSettings) }}
+}
+
+%%SELECTOR%% p.gform_required_legend {
+  {{ macros.spacing_complex(design.required_indicators.legend_margin, 'margin') }}
+  {{ macros.typography(design.required_indicators.legend, globalSettings) }}
+}
