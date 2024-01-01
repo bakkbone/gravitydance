@@ -15,7 +15,6 @@ if ($dovalues) {
 		$values .= $value['parameter'].'='.$value['value'].'&';
 	} 
 }
-$theme = isset($propertiesData['content']['form']['theme']) ? $propertiesData['content']['form']['theme'] : 'orbital';
 
 $shortcode = '[gravityform id="'.$formid.'"';
 $shortcode .= ' title="'.$title.'"';
@@ -27,7 +26,6 @@ if (isset( $propertiesData['content']['form']['tab_index'])) {
 if ($dovalues) {
 	$shortcode .= ' field_values="'.$values.'"';
 }
-$shortcode .= ' theme="'.$theme.'"';
-$shortcode .= ']';
+$shortcode .= ' theme="orbital"]';
 
 echo do_shortcode($shortcode);
