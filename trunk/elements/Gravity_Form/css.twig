@@ -1,4 +1,3 @@
-/** Wrapper **/
 %%SELECTOR%% {
   {{ macros.size(design.wrapper.size) }}
   {{ macros.spacing_all(design.wrapper.spacing) }}
@@ -9,8 +8,13 @@
 %%SELECTOR%% * {
   {{ macros.typography(design.wrapper.default_typography, globalSettings) }}
 }
+%%SELECTOR%% .gform_fields {
+  row-gap: {{ design.wrapper.row_gap.style }};
+}
 
-/** Title **/
+%%SELECTOR%% .gform_heading {
+  {{ macros.borders(design.header.borders) }}
+}
 %%SELECTOR%% .gform_title {
   {{ macros.typography(design.header.title.typography, globalSettings) }}
   {{ macros.spacing_all(design.header.title.spacing) }}
@@ -19,7 +23,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.header.title.typography) }}
 }
 
-/** Description **/
 %%SELECTOR%% .gform_description {
   {{ macros.typography(design.header.description.typography, globalSettings) }}
   {{ macros.spacing_all(design.header.description.spacing) }}
@@ -28,7 +31,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.header.description.typography) }}
 }
 
-/** Required **/
 %%SELECTOR%% .gfield_required, %%SELECTOR%% .gform_required_legend .gfield_required {
   {{ macros.typography(design.required_indicators.indicator, globalSettings) }}
 }
@@ -37,7 +39,6 @@
   {{ macros.typography(design.required_indicators.legend, globalSettings) }}
 }
 
-/** Progress Bar **/
 %%SELECTOR%% .gf_progressbar_wrapper {
   {{ macros.spacing_all(design.progress.progress_bar.wrapper_spacing) }}
 }
@@ -69,7 +70,6 @@
 }
 {% endif %}
 
-/** Steps **/
 %%SELECTOR%% .gf_page_steps {
   {{ macros.spacing_all(design.progress.steps.wrapper_spacing) }}
 }
@@ -77,7 +77,6 @@
   {{ macros.spacing_all(design.progress.steps.step_spacing) }}
 }
 
-/** Pending Step **/
 %%SELECTOR%% .gf_page_steps .gf_step.gf_step_pending .gf_step_number {
   {{ macros.borders(design.progress.steps.pending_step.step_number.borders) }}
   {{ macros.backgroundColor(design.progress.steps.pending_step.step_number.background) }}
@@ -94,7 +93,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.progress.steps.pending_step.step_label) }}
 }
 
-/** Active Step **/
 %%SELECTOR%% .gf_page_steps .gf_step.gf_step_active .gf_step_number {
   {{ macros.borders(design.progress.steps.active_step.step_number.borders) }}
   {{ macros.backgroundColor(design.progress.steps.active_step.step_number.background) }}
@@ -111,7 +109,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.progress.steps.active_step.step_label) }}
 }
 
-/** Completed Step **/
 %%SELECTOR%% .gf_page_steps .gf_step.gf_step_completed .gf_step_number {
   {{ macros.borders(design.progress.steps.completed_step.step_number.borders) }}
   {{ macros.backgroundColor(design.progress.steps.completed_step.step_number.background) }}
@@ -134,7 +131,6 @@
   {{ macros.textColor(design.progress.steps.completed_step.step_number.checkmark_hover) }}
 }
 
-/** Label **/
 %%SELECTOR%% .gfield .gfield_label {
   {{ macros.typography(design.label.typography, globalSettings) }}
   {{ macros.spacing_all(design.label.spacing) }}
@@ -143,7 +139,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.label.typography) }}
 }
 
-/** Sub-label **/
 %%SELECTOR%% .gfield .gform-field-label--type-sub {
   {{ macros.typography(design.sub_label.typography, globalSettings) }}
   {{ macros.spacing_all(design.sub_label.spacing) }} 
@@ -152,7 +147,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.sub_label.typography) }}
 }
 
-/** Description **/
 %%SELECTOR%% .gfield .gfield_description {
   {{ macros.typography(design.description.typography, globalSettings) }}
   {{ macros.spacing_all(design.description.spacing) }}
@@ -161,7 +155,6 @@
   {{ macros.typographyWithHoverableColorAndEffects(design.description.typography) }}
 }
 
-/** Inputs **/
 %%SELECTOR%% .gfield > .ginput_container {
   {{ macros.spacing_all(design.inputs.spacing) }}
 }
@@ -173,12 +166,9 @@
 %%SELECTOR%% ::placeholder {
   {{ macros.typography(design.inputs.placeholder, globalSettings) }}
 }
-
 %%SELECTOR%% input:focus, %%SELECTOR%% textarea:focus, %%SELECTOR%% select:focus {
   {{ macros.borders(design.inputs.focus) }}
 }
-
-/** Select **/
 %%SELECTOR%% .gfield select {
   {{ macros.borders(design.select.borders) }}
   {{ macros.background(design.select.background) }}
@@ -191,46 +181,61 @@
   {{ macros.backgroundColor(design.select.option.checked.background) }}
 }
 
-/** Checkbox **/
 %%SELECTOR%% input[type=checkbox] {
   {{ macros.borders(design.checkbox.borders) }}
   {{ macros.size(design.checkbox.size) }}
   {{ macros.spacing_all(design.checkbox.spacing) }}
   {{ macros.background(design.checkbox.background) }}
 }
+%%SELECTOR%% input[type=checkbox] + label {
+  {{ macros.typography(design.checkbox.typography, globalSettings) }}
+}
 %%SELECTOR%% input[type=checkbox]:checked {
   {{ macros.background(design.checkbox.checked.background) }}
   {{ macros.borders(design.checkbox.checked.borders) }}
 }
-%%SELECTOR%% input[type=checkbox]:checked:before {
-	color: {{ design.checkbox.checked.checkmark }};
+%%SELECTOR%% .gfield input[type=checkbox]:checked + label {
+  {{ macros.typography(design.checkbox.checked.typography, globalSettings) }}
+}
+%%SELECTOR%% input[type=checkbox]:checked::before {
+  color: {{ design.checkbox.checked.checkmark }};
 }
 %%SELECTOR%% input[type=checkbox]:focus {
   {{ macros.borders(design.checkbox.focus) }}
 }
+%%SELECTOR%% div:hover > input[type=checkbox] + label {
+  {{ macros.typographyWithHoverableColorAndEffects(design.checkbox.typography) }}
+}
 
-/** Radio **/
 %%SELECTOR%% input[type=radio] {
   {{ macros.borders(design.radio.borders) }}
   {{ macros.size(design.radio.size) }}
   {{ macros.spacing_all(design.radio.spacing) }}
   {{ macros.background(design.radio.background) }}
 }
+%%SELECTOR%% input[type=radio] + label {
+  {{ macros.typography(design.radio.typography, globalSettings) }}
+}
 %%SELECTOR%% input[type=radio]:checked {
   {{ macros.background(design.radio.checked.background) }}
   {{ macros.borders(design.radio.checked.borders) }}
 }
-%%SELECTOR%% input[type=radio]:checked:before {
+%%SELECTOR%% input[type=radio]:checked + label {
+  {{ macros.typography(design.radio.checked.typography, globalSettings) }}
+}
+%%SELECTOR%% input[type=radio]:checked::before {
   background-color: {{ design.radio.checked.checkmark.color }};
   inline-size: {{ design.radio.checked.checkmark.size.style }};
   block-size: {{ design.radio.checked.checkmark.size.style }};
   {{ macros.border_radius(design.radio.checked.checkmark.border_radius) }}
 }
+%%SELECTOR%% div:hover > input[type=radio] + label {
+  {{ macros.typographyWithHoverableColorAndEffects(design.radio.typography) }}
+}
 %%SELECTOR%% input[type=radio]:focus {
   {{ macros.borders(design.radio.focus) }}
 }
 
-/** Section **/
 %%SELECTOR%% .gfield--type-section {
   border-block-end: unset;
   padding-block-end: unset;
@@ -246,19 +251,17 @@
   {{ macros.typography(design.section_break.description.typography, globalSettings) }}
 }
 
-/** Datepicker **/
-%%SELECTOR%% div.gform_fields div.gfield div.ginput_container.ginput_container_date:after {
-  color: {{ design.datepicker.icon_color }}
+%%SELECTOR%% div.gform_fields div.gfield div.ginput_container.ginput_container_date::after {
+  color: {{ design.datepicker.icon_color }};
 }
-%%SELECTOR%% div.gform_fields div.gfield div.ginput_container.ginput_container_date:hover:after {
-  color: {{ design.datepicker.icon_color_hover }}
+%%SELECTOR%% div.gform_fields div.gfield div.ginput_container.ginput_container_date:hover::after {
+  color: {{ design.datepicker.icon_color_hover }};
 }
 div.gform-theme-datepicker.ui-datepicker {
   {{ macros.borders(design.datepicker.popup.borders) }}
   {{ macros.spacing_all(design.datepicker.popup.spacing) }}
   {{ macros.background(design.datepicker.popup.background) }}
 }
-div.gform-theme-datepicker.ui-datepicker .ui-datepicker-header {}
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-header a {
   color: {{ design.datepicker.popup.header.arrows.color }};
   {{ macros.background(design.datepicker.popup.header.arrows.background) }}
@@ -276,7 +279,6 @@ div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar th:hover {
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar th span {
   {{ macros.typography(design.datepicker.popup.weekday_header.typography, globalSettings) }}
-    }
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar th:hover span {
   {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.weekday_header.typography) }}
@@ -294,43 +296,42 @@ div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td:hover a {
   {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.date.typography) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month {
-  {{ macros.backgroundColor(design.datepicker.popup.date_other_month_.background) }}
+  {{ macros.backgroundColor(design.datepicker.popup.date_in_other_month.background) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month > span {
-  {{ macros.typography(design.datepicker.popup.date_other_month_.typography, globalSettings) }}
+  {{ macros.typography(design.datepicker.popup.date_in_other_month.typography, globalSettings) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month:hover {
-  {{ macros.backgroundColor(design.datepicker.popup.date_other_month_.background_hover) }}
+  {{ macros.backgroundColor(design.datepicker.popup.date_in_other_month.background_hover) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month:hover > span {
-  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.date_other_month_.typography) }}
+  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.date_in_other_month.typography) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day {
-  {{ macros.backgroundColor(design.datepicker.popup.date_selected_.background) }}
+  {{ macros.backgroundColor(design.datepicker.popup.selected_date.background) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  {{ macros.typography(design.datepicker.popup.date_selected_.typography, globalSettings) }}
+  {{ macros.typography(design.datepicker.popup.selected_date.typography, globalSettings) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day:hover {
-  {{ macros.backgroundColor(design.datepicker.popup.date_selected_.background_hover) }}
+  {{ macros.backgroundColor(design.datepicker.popup.selected_date.background_hover) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day:hover a {
-  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.date_selected_.typography) }}
+  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.selected_date.typography) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today {
-  {{ macros.backgroundColor(design.datepicker.popup.date_today_.background) }}
+  {{ macros.backgroundColor(design.datepicker.popup.today.background) }}
 }
 div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
-  {{ macros.typography(design.datepicker.popup.date_today_.typography, globalSettings) }}
+  {{ macros.typography(design.datepicker.popup.today.typography, globalSettings) }}
 }
-div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today {
-  {{ macros.backgroundColor(design.datepicker.popup.date_today_.background_hover) }}
+div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today:hover {
+  {{ macros.backgroundColor(design.datepicker.popup.today.background_hover) }}
 }
-div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
-  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.date_today_.typography) }}
+div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today:hover a {
+  {{ macros.typographyWithHoverableColorAndEffects(design.datepicker.popup.today.typography) }}
 }
 
-/** List **/
 %%SELECTOR%% .gfield_list .gfield_list_icons button.add_list_item {
   {{ macros.backgroundColor(design.list.icons.add.background) }}
   {{ macros.border_radius(design.list.icons.add.border_radius) }}
@@ -362,10 +363,202 @@ div.gform-theme-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicke
   {{ macros.typography(design.list.column_headers.typography, globalSettings) }}
 }
 
-/** Consent **/
-/** File Upload **/
-/** Product **/
-/** Price **/
-/** Shipping **/
-/** Total **/
-/** Buttons **/
+%%SELECTOR%% .gfield_consent_description {
+  {{ macros.spacing_all(design.consent.spacing) }}
+  {{ macros.borders(design.consent.borders) }}
+  {{ macros.typography(design.consent.typography, globalSettings) }}
+}
+
+%%SELECTOR%% .ginput_container_fileupload input[type=file] {
+  {{ macros.backgroundColor(design.file_upload.single.field.background) }}
+  {{ macros.typography(design.file_upload.single.field.typography, globalSettings) }}
+  {{ macros.size(design.file_upload.single.field.size) }}
+}
+%%SELECTOR%% .ginput_container_fileupload input[type=file]::file-selector-button {
+  {{ macros.backgroundColor(design.file_upload.single.button.background) }}
+  {{ macros.typography(design.file_upload.single.button.typography, globalSettings) }}
+}
+%%SELECTOR%% .ginput_container_fileupload input[type=file]:hover {
+  {{ macros.backgroundColor(design.file_upload.single.field.background_hover) }}
+  {{ macros.typographyWithHoverableColorAndEffects(design.file_upload.single.field.typography) }}
+}
+%%SELECTOR%% .ginput_container_fileupload input[type=file]:hover::file-selector-button {
+  {{ macros.backgroundColor(design.file_upload.single.button.background_hover) }}
+  {{ macros.typographyWithHoverableColorAndEffects(design.file_upload.single.button.typography) }}
+}
+%%SELECTOR%% .ginput_container_fileupload input[type=file] + .gfield_description {
+  {{ macros.typography(design.file_upload.single.description, globalSettings) }}
+}
+
+%%SELECTOR%% .gform_drop_area {
+  {{ macros.backgroundColor(design.file_upload.multi.drop_area.background) }}
+}
+%%SELECTOR%% .gform_drop_area:hover {
+  {{ macros.backgroundColor(design.file_upload.multi.drop_area.background_hover) }}
+}
+%%SELECTOR%% .gform_drop_area::before {
+  {{ macros.spacing_all(design.file_upload.multi.drop_area.icon.spacing) }}
+  background-color: {{ design.file_upload.multi.drop_area.icon.color }}
+  font-size: {{ design.file_upload.multi.drop_area.icon.font_size.style }};
+}
+%%SELECTOR%% .gform_drop_area:hover::before {
+  {{ design.file_upload.multi.drop_area.icon.color_hover }}
+}
+%%SELECTOR%% .gform_drop_area .gform_drop_instructions {
+  {{ macros.spacing_all(design.file_upload.multi.drop_area.text.spacing) }}
+  {{ macros.typography(design.file_upload.multi.drop_area.text.typography, globalSettings) }}
+}
+%%SELECTOR%% .gform_drop_area:hover .gform_drop_instructions {
+  {{ macros.typographyWithHoverableColorAndEffects(design.file_upload.multi.drop_area.text.typography) }}
+}
+%%SELECTOR%% div.gform_fileupload_multifile .gform_drop_area .gform_button_select_files {
+  {{ macros.typography(design.file_upload.multi.drop_area.button.typography, globalSettings) }}
+  {{ macros.borders(design.file_upload.multi.drop_area.button.borders) }}
+  {{ macros.spacing_all(design.file_upload.multi.drop_area.button.spacing) }}
+  {{ macros.backgroundColor(design.file_upload.multi.drop_area.button.background) }}
+  {{ macros.gdsize(design.file_upload.multi.drop_area.button.size) }}
+}
+%%SELECTOR%% div.gform_fileupload_multifile .gform_drop_area .gform_button_select_files:hover {
+  {{ macros.typographyWithHoverableColorAndEffects(design.file_upload.multi.drop_area.button.typography) }}
+  {{ macros.backgroundColor(design.file_upload.multi.drop_area.button.background_hover) }}
+}
+%%SELECTOR%% .gform_fileupload_rules {
+  {{ macros.typography(design.file_upload.multi.rules.typography, globalSettings) }}
+  {{ macros.spacing_all(design.file_upload.multi.rules.spacing) }}
+}
+%%SELECTOR%% .ginput_preview_list {
+  gap: {{ design.file_upload.multi.uploaded_files.list_gap.style }};
+}
+%%SELECTOR%% .ginput_preview_list .ginput_preview {
+  {{ macros.spacing_all(design.file_upload.multi.uploaded_files.item_spacing) }}
+}
+%%SELECTOR%% .ginput_preview_list .ginput_preview .gfield_fileupload_filename {
+  {{ macros.typography(design.file_upload.multi.uploaded_files.file_name, globalSettings) }}
+}
+%%SELECTOR%% .ginput_preview_list .ginput_preview .gfield_fileupload_filesize {
+  {{ macros.typography(design.file_upload.multi.uploaded_files.file_size, globalSettings) }}
+}
+%%SELECTOR%% .ginput_preview_list .ginput_preview .gfield_fileupload_progress {
+  
+}
+%%SELECTOR%% .gfield_fileupload_progress .gfield_fileupload_progressbar {
+  height: {{ design.file_upload.multi.uploaded_files.progress_bar.height.style }};
+  {{ macros.backgroundColor(design.file_upload.multi.uploaded_files.progress_bar.bar_color) }}
+  {{ macros.border_radius(design.file_upload.multi.uploaded_files.progress_bar.border_radius) }}
+}
+%%SELECTOR%% .gfield_fileupload_progress .gfield_fileupload_progressbar span {
+  height: {{ design.file_upload.multi.uploaded_files.progress_bar.height.style }};
+  {{ macros.backgroundColor(design.file_upload.multi.uploaded_files.progress_bar.progress_color) }}
+  {{ macros.border_radius(design.file_upload.multi.uploaded_files.progress_bar.border_radius) }}
+}
+%%SELECTOR%% .gfield_fileupload_progress .gfield_fileupload_percent {
+  {{ macros.typography(design.file_upload.multi.uploaded_files.progress_bar.percentage, globalSettings) }}
+}
+%%SELECTOR%% .ginput_preview_list .ginput_preview .gfield_fileupload_progress.gfield_fileupload_progress_complete::after {
+  color: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.color }}
+  line-height: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.font_size.style }};
+  font-size: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.font_size.style }};
+  block-size: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.font_size.style }};
+  inline-size: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.font_size.style }};
+  min-inline-size: {{ design.file_upload.multi.uploaded_files.progress_bar.completed_icon.font_size.style }};
+}
+%%SELECTOR%% .ginput_preview button.gform_delete_file.gform-theme-button.gform-theme-button--simple ::before {
+  font-size: {{ design.file_upload.multi.uploaded_files.delete_icon.font_size.style }};
+  color: {{ design.file_upload.multi.uploaded_files.delete_icon.color }}
+}
+%%SELECTOR%% button.gform_delete_file.gform-theme-button.gform-theme-button--simple:hover ::before {
+  color: {{ design.file_upload.multi.uploaded_files.delete_icon.color_hover }}
+}
+%%SELECTOR%% .ginput_product_price_wrapper {
+  text-align: {{ design.products.price_alignment }};
+}
+%%SELECTOR%% .ginput_product_price_wrapper .ginput_product_price_label {
+  {{ macros.typography(design.products.price_label, globalSettings) }}
+}
+%%SELECTOR%% input.ginput_product_price {
+  {{ macros.typography(design.products.price, globalSettings) }}
+  text-align: left;
+  width: {{ design.products.price_width.style }};
+}
+%%SELECTOR%% input.ginput_shipping_price {
+  {{ macros.typography(design.products.shipping_price, globalSettings) }}
+}
+%%SELECTOR%% input.ginput_total {
+  {{ macros.typography(design.products.total, globalSettings) }}
+}
+
+%%SELECTOR%% .gform_page_footer {
+  {{ macros.spacing_all(design.buttons.button_section.spacing) }}
+  {{ macros.borders(design.buttons.button_section.borders) }}
+  {{ macros.background(design.buttons.button_section.background) }}
+  justify-content: {{ design.buttons.button_section.alignment }};
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer input.gform_next_button {
+  {{ macros.borders(design.buttons.next.borders) }}
+  {{ macros.spacing_all(design.buttons.next.spacing) }}
+  {{ macros.size(design.buttons.next.size) }}
+  {{ macros.typography(design.buttons.next.typography, globalSettings) }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer input.gform_previous_button {
+  {{ macros.borders(design.buttons.previous.borders) }}
+  {{ macros.spacing_all(design.buttons.previous.spacing) }}
+  {{ macros.size(design.buttons.previous.size) }}
+  {{ macros.typography(design.buttons.previous.typography, globalSettings) }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer .gform_save_link {
+  {{ macros.borders(design.buttons.save.borders) }}
+  {{ macros.spacing_all(design.buttons.save.spacing) }}
+  {{ macros.size(design.buttons.save.size) }}
+  {{ macros.typography(design.buttons.save.typography, globalSettings) }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer .gform_save_link::before {
+  font-size: {{ design.buttons.save.icon.size.style }};
+  line-height: {{ design.buttons.save.icon.size.style }};
+  background-color: {{ design.buttons.save.icon.color }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer .gform_save_link:hover::before {
+  font-size: {{ design.buttons.save.hover.icon.size.style }};
+  line-height: {{ design.buttons.save.hover.icon.size.style }};
+  background-color: {{ design.buttons.save.hover.icon.color }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer input[type=submit].gform_button {
+  {{ macros.borders(design.buttons.submit.borders) }}
+  {{ macros.spacing_all(design.buttons.submit.spacing) }}
+  {{ macros.size(design.buttons.submit.size) }}
+  {{ macros.typography(design.buttons.submit.typography, globalSettings) }}
+}
+%%SELECTOR%% div.gform_body div.gform_page_footer input[type=submit].gform_button:hover {
+  {{ macros.borders(design.buttons.submit.hover.borders) }}
+  {{ macros.spacing_all(design.buttons.submit.hover.spacing) }}
+  {{ macros.size(design.buttons.submit.hover.size) }}
+  {{ macros.typography(design.buttons.submit.hover.typography, globalSettings) }}
+}
+
+%%SELECTOR%% .gfield.gfield_error input, %%SELECTOR%% .gfield.gfield_error textarea, %%SELECTOR%% .gfield.gfield_error select {
+  {{ macros.borders(design.validation.invalid_input.input_borders) }}
+  {{ macros.backgroundColor(design.validation.invalid_input.input_background) }}
+}
+%%SELECTOR%% .gfield.gfield_error .validation_message.gfield_validation_message {
+  {{ macros.typography(design.validation.invalid_input.inline_error, globalSettings) }}
+}
+%%SELECTOR%% .gform_validation_errors {
+  {{ macros.spacing_all(design.validation.validation_summary.spacing) }}
+  {{ macros.borders(design.validation.validation_summary.borders) }}
+  {{ macros.backgroundColor(design.validation.validation_summary.background) }}
+}
+%%SELECTOR%% .gform_validation_errors h2 {
+  text-transform: unset;
+  justify-content: {{ design.validation.validation_summary.error_title.alignment }};
+  {{ macros.typography(design.validation.validation_summary.error_title.typography, globalSettings) }}
+}
+%%SELECTOR%% .gform_validation_errors h2 .gform-icon::before {
+  background-color: {{ design.validation.validation_summary.error_title.icon_color }}
+  font-size: {{ design.validation.validation_summary.error_title.icon_size.style }};
+}
+%%SELECTOR%% .gform_validation_errors ol {
+  {{ macros.spacing_all(design.validation.validation_summary.error_list.spacing) }}
+  list-style-type: {{ design.validation.validation_summary.error_list.list_item.bullet_type }};
+}
+%%SELECTOR%% .gform_validation_errors ol li, %%SELECTOR%% .gform_validation_errors ol li a {
+  {{ macros.typography(design.validation.validation_summary.error_list.list_item.typography, globalSettings) }}
+}

@@ -5,17 +5,7 @@ namespace Gravitydance;
 class Loader {
 	
 	function __construct() {
-		//add_filter( 'breakdance_reusable_dependencies_urls', [$this, 'gravitydance_gf_styles'], PHP_INT_MAX );
 		add_action( 'wp_head', [$this, 'head'] );
-	}
-	
-	function gravitydance_gf_styles($urls) {
-		$base_url = \GFCommon::get_base_url();
-		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG || isset( $_GET['gform_debug'] ) ? '' : '.min';
-		$urls['gf_theme'] = "{$base_url}/assets/js/dist/scripts-theme{$min}.js";
-		$urls['gf_utils'] = "{$base_url}/assets/js/dist/utils{$min}.js";
-		$urls['gf_vendor'] = "{$base_url}/assets/js/dist/vendor-theme{$min}.js";
-		return $urls;
 	}
 	
 	function head() {
@@ -45,16 +35,6 @@ class Loader {
 					echo sprintf($style_template, $style.'?ver='.$version);
 				} 
 			}
-			
-			$urls = [];
-			$urls['theme'] = "{$base_url}/assets/js/dist/scripts-theme{$min}.js";
-			$urls['utils'] = "{$base_url}/assets/js/dist/utils{$min}.js";
-			$urls['vendor'] = "{$base_url}/assets/js/dist/vendor-theme{$min}.js";
-			
-			foreach ($urls as $key => $url) {
-				$script_template = '<script type="text/javascript" src="%1s" id="gravitydance_%2s"></script>';
-				//echo sprintf($script_template, $url.'?ver='.$version, $key);
-			} 
 			
 		}
 	}

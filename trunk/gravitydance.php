@@ -3,7 +3,7 @@
  * Plugin Name:			Gravitydance
  * Plugin URI:			https://github.com/bakkbone/gravitydance
  * Description:			Provides a Gravity Forms element for Breakdance.
- * Version:				1.0.0-beta
+ * Version:				1.0.0
  * Requires at least:	6.0
  * Requires PHP:		7.4
  * Author:				BAKKBONE Australia
@@ -36,7 +36,7 @@ add_action('breakdance_loaded', function () {
         'Gravitydance',
         'element',
         __('Gravitydance Elements', 'gravitydance'),
-        false
+        true, // hides path in Element Studio
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
@@ -44,7 +44,7 @@ add_action('breakdance_loaded', function () {
         'Gravitydance',
         'macro',
         __('Gravitydance Macros', 'gravitydance'),
-        false,
+        true, // hides path in Element Studio
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
@@ -52,7 +52,7 @@ add_action('breakdance_loaded', function () {
         'Gravitydance',
         'preset',
         __('Gravitydance Presets', 'gravitydance'),
-        false,
+        true, // hides path in Element Studio
     );
     require (__DIR__ . '/loader.php');
     new Loader;

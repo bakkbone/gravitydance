@@ -18,9 +18,11 @@ function gravitydancegetforms(){
 	foreach ($forms as $form) {
 		$id = strval(rgar($form, 'id'));
 		$title = rgar($form, 'title');
+		/* translators: %1s: form ID. %2s: form title. */
+		$text = sprintf(esc_html__('#%1s: %2s', 'gravitydance'), $id, $title);
 		$list[] = [
 			'value'	=> $id,
-			'text'	=> $title
+			'text'	=> $text
 		];
 	}
 	$list = wp_json_encode($list);

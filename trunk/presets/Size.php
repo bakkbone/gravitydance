@@ -9,10 +9,10 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
     "Gravitydance\\Size",
     c(
         "size",
-        "Size",
+        __("Size", 'gravitydance'),
         [c(
         "height",
-        "Height",
+        __("Height", 'gravitydance'),
         [],
         ['type' => 'unit', 'layout' => 'inline'],
         false,
@@ -20,7 +20,7 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
         [],
       ), c(
         "max_height",
-        "Max Height",
+        __("Max Height", 'gravitydance'),
         [],
         ['type' => 'unit', 'layout' => 'inline'],
         false,
@@ -28,7 +28,7 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
         [],
       ), c(
         "width",
-        "Width",
+        __("Width", 'gravitydance'),
         [],
         ['type' => 'unit', 'layout' => 'inline'],
         false,
@@ -36,7 +36,7 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
         [],
       ), c(
         "max_width",
-        "Max Width",
+        __("Max Width", 'gravitydance'),
         [],
         ['type' => 'unit', 'layout' => 'inline'],
         false,
@@ -49,9 +49,6 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
         [],
       ),
     true,
-    ['codeHelp' => 'width: %%TWIG_PATH%%.width;;
-max-width: %%TWIG_PATH%%.max_width;;
-height: %%TWIG_PATH%%.height;;
-max-height: %%TWIG_PATH%%.max_height;;']
+    ['codeHelp' => '{{ macros.gdsize(%%TWIGPATH%%) }}']
 );
 
