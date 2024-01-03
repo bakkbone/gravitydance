@@ -14,13 +14,6 @@ Provides a Breakdance element for your Gravity Forms.
 == Description ==
 Provides a Breakdance element for your Gravity Forms.
 
-#### Limitations
-
-Please be aware of the following known limitations:
-
-* Some forms will not display in the builder due to JS dependencies we currently cannot reliably call with Element Studio
-* Enhanced Select (Dropdown with Enhanced User Interface enabled) will show standard select styling in the builder, as GF does not load the enhanced UI in the builder with the scripts not fully loaded as referenced above
-
 == Installation ==
 ### Automatic installation
 1. Search for "Gravitydance" in the Plugin Repository from the Plugins > Add New screen
@@ -39,9 +32,6 @@ Please be aware of the following known limitations:
 == Screenshots ==
 
 == Changelog ==
-### 1.0.1
-* Allow customization of builder label
-* Add support for Enhanced Select
 ### 1.0.0
 * Initial release.
 

@@ -169,7 +169,7 @@
 %%SELECTOR%% input:focus, %%SELECTOR%% textarea:focus, %%SELECTOR%% select:focus {
   {{ macros.borders(design.inputs.focus) }}
 }
-%%SELECTOR%% .gfield select:only-child {
+%%SELECTOR%% .gfield select {
   {{ macros.borders(design.select.borders) }}
   {{ macros.background(design.select.background) }}
 }
@@ -181,37 +181,6 @@
   {{ macros.backgroundColor(design.select.option.checked.background) }}
 }
 
-%%SELECTOR%% .gfield .chosen-single {
-  {{ macros.borders(design.enhanced_select.borders) }}
-  {{ macros.background(design.enhanced_select.background) }}
-  {{ macros.typography(design.enhanced_select.typography, globalSettings) }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-search {
-  {{ macros.backgroundColor(design.enhanced_select.option.background) }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-results {
-  {{ macros.backgroundColor(design.enhanced_select.option.background) }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-results .active-result {
-  {{ macros.typography(design.enhanced_select.option.typography, globalSettings) }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-results .active-result.result-selected {
-  {{ macros.typography(design.enhanced_select.option.checked.typography, globalSettings) }}
-  {{ macros.backgroundColor(design.enhanced_select.option.checked.background) }}
-  box-shadow: inset 3px 0 0 {{ design.enhanced_select.option.checked.indicator }};
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-results .active-result.highlighted {
-  {{ macros.typographyWithHoverableColorAndEffects(design.enhanced_select.option.typography) }}
-  {{ macros.backgroundColor(design.enhanced_select.option.background_hover) }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-search-input {
-  {{ macros.borders(design.enhanced_select.search_box.borders) }}
-  {{ macros.typography(design.enhanced_select.search_box.typography, globalSettings) }}
-  background-color: {{ design.enhanced_select.search_box.background.value ?? design.enhanced_select.search_box.background }}
-}
-%%SELECTOR%% .gfield .chosen-container .chosen-search-input:focus {
-  {{ macros.borders(design.enhanced_select.search_box.borders_focus) }}
-}
 %%SELECTOR%% input[type=checkbox] {
   {{ macros.borders(design.checkbox.borders) }}
   {{ macros.size(design.checkbox.size) }}

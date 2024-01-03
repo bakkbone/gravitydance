@@ -1,10 +1,5 @@
 <?php
 
-if ($isBuilder && !$propertiesData['content']['builder_label']['hide_label']){
-	$label = $propertiesData['content']['builder_label']['custom_label'] ? $propertiesData['content']['builder_label']['custom_label'] : esc_html__('Gravity Form', 'gravitydance').'<br>'.esc_html__('(some forms may not display in builder)', 'gravitydance');
-	echo '<div style="padding: 20px; margin-bottom:15px;background: repeating-linear-gradient(145deg, #eff6ff, #eff6ff 10px, #d8e3f9 10px, #d8e3f9 20px); width: 100%; color: black; font-weight: bold;">'.$label.'</div>';
-}
-
 $firstform = rgar(\GFAPI::get_forms()[0], 'id');
 
 $formid = isset( $propertiesData['content']['form']['form']) ? $propertiesData['content']['form']['form'] : $firstform;

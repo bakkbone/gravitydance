@@ -12,7 +12,6 @@
  * License URI:			https://www.gnu.org/licenses/gpl.html
  * Tested up to:		6.4
  * Text Domain:			gravitydance
- * Domain Path:			/lang
 **/
 
 namespace Gravitydance;
@@ -31,9 +30,6 @@ if ( ! function_exists('get_plugin_data') ) {
 	require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
 
-add_action('init', function(){
-	load_plugin_textdomain('gravitydance', false, dirname( plugin_basename( __FILE__ ) ) . '/lang');
-});
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',

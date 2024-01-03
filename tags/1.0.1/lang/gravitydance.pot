@@ -1,0 +1,748 @@
+# Copyright (C) 2024 BAKKBONE Australia
+# This file is distributed under the GNU General Public License (GPL) 3.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravitydance 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gravitydance\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-03T06:20:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: gravitydance\n"
+
+#. Plugin Name of the plugin
+#: elements/Gravity_Form/element.php:54
+msgid "Gravitydance"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/bakkbone/gravitydance"
+msgstr ""
+
+#. Description of the plugin
+msgid "Provides a Gravity Forms element for Breakdance."
+msgstr ""
+
+#. Author of the plugin
+msgid "BAKKBONE Australia"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.bakkbone.com.au/"
+msgstr ""
+
+#. translators: %1$s: form ID. %2$s: form title.
+#: ajax_endpoints.php:22
+msgid "#%1$s: %2$s"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:39
+#: elements/Gravity_Form/ssr.php:4
+msgid "Gravity Form"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:92
+msgid "Wrapper"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:95
+#: elements/Gravity_Form/element.php:253
+#: elements/Gravity_Form/element.php:543
+#: elements/Gravity_Form/element.php:566
+#: elements/Gravity_Form/element.php:599
+#: elements/Gravity_Form/element.php:622
+#: elements/Gravity_Form/element.php:655
+#: elements/Gravity_Form/element.php:678
+#: elements/Gravity_Form/element.php:711
+#: elements/Gravity_Form/element.php:724
+#: elements/Gravity_Form/element.php:758
+#: elements/Gravity_Form/element.php:771
+#: elements/Gravity_Form/element.php:1022
+#: elements/Gravity_Form/element.php:1091
+#: elements/Gravity_Form/element.php:1135
+#: elements/Gravity_Form/element.php:1611
+#: elements/Gravity_Form/element.php:1718
+#: presets/Size.php:12
+msgid "Size"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:100
+#: elements/Gravity_Form/element.php:149
+#: elements/Gravity_Form/element.php:162
+#: elements/Gravity_Form/element.php:180
+#: elements/Gravity_Form/element.php:240
+#: elements/Gravity_Form/element.php:445
+#: elements/Gravity_Form/element.php:463
+#: elements/Gravity_Form/element.php:481
+#: elements/Gravity_Form/element.php:502
+#: elements/Gravity_Form/element.php:538
+#: elements/Gravity_Form/element.php:561
+#: elements/Gravity_Form/element.php:594
+#: elements/Gravity_Form/element.php:617
+#: elements/Gravity_Form/element.php:650
+#: elements/Gravity_Form/element.php:673
+#: elements/Gravity_Form/element.php:706
+#: elements/Gravity_Form/element.php:753
+#: elements/Gravity_Form/element.php:810
+#: elements/Gravity_Form/element.php:1027
+#: elements/Gravity_Form/element.php:1096
+#: elements/Gravity_Form/element.php:1184
+#: elements/Gravity_Form/element.php:1192
+#: elements/Gravity_Form/element.php:1210
+#: elements/Gravity_Form/element.php:1249
+#: elements/Gravity_Form/element.php:1291
+#: elements/Gravity_Form/element.php:1525
+#: elements/Gravity_Form/element.php:1548
+#: elements/Gravity_Form/element.php:1648
+#: elements/Gravity_Form/element.php:1677
+#: elements/Gravity_Form/element.php:1695
+#: elements/Gravity_Form/element.php:1741
+#: elements/Gravity_Form/element.php:1961
+#: elements/Gravity_Form/element.php:2019
+msgid "Spacing"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:105
+#: elements/Gravity_Form/element.php:258
+#: elements/Gravity_Form/element.php:263
+#: elements/Gravity_Form/element.php:323
+#: elements/Gravity_Form/element.php:362
+#: elements/Gravity_Form/element.php:401
+#: elements/Gravity_Form/element.php:512
+#: elements/Gravity_Form/element.php:820
+#: elements/Gravity_Form/element.php:853
+#: elements/Gravity_Form/element.php:871
+#: elements/Gravity_Form/element.php:887
+#: elements/Gravity_Form/element.php:1032
+#: elements/Gravity_Form/element.php:1045
+#: elements/Gravity_Form/element.php:1101
+#: elements/Gravity_Form/element.php:1114
+#: elements/Gravity_Form/element.php:1254
+#: elements/Gravity_Form/element.php:1273
+#: elements/Gravity_Form/element.php:1319
+#: elements/Gravity_Form/element.php:1340
+#: elements/Gravity_Form/element.php:1361
+#: elements/Gravity_Form/element.php:1382
+#: elements/Gravity_Form/element.php:1403
+#: elements/Gravity_Form/element.php:1424
+#: elements/Gravity_Form/element.php:1456
+#: elements/Gravity_Form/element.php:1488
+#: elements/Gravity_Form/element.php:1577
+#: elements/Gravity_Form/element.php:1598
+#: elements/Gravity_Form/element.php:1637
+#: elements/Gravity_Form/element.php:1705
+#: elements/Gravity_Form/element.php:1971
+msgid "Background"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:110
+#: elements/Gravity_Form/element.php:144
+#: elements/Gravity_Form/element.php:318
+#: elements/Gravity_Form/element.php:357
+#: elements/Gravity_Form/element.php:396
+#: elements/Gravity_Form/element.php:507
+#: elements/Gravity_Form/element.php:533
+#: elements/Gravity_Form/element.php:556
+#: elements/Gravity_Form/element.php:589
+#: elements/Gravity_Form/element.php:612
+#: elements/Gravity_Form/element.php:645
+#: elements/Gravity_Form/element.php:668
+#: elements/Gravity_Form/element.php:701
+#: elements/Gravity_Form/element.php:748
+#: elements/Gravity_Form/element.php:815
+#: elements/Gravity_Form/element.php:848
+#: elements/Gravity_Form/element.php:1017
+#: elements/Gravity_Form/element.php:1050
+#: elements/Gravity_Form/element.php:1086
+#: elements/Gravity_Form/element.php:1119
+#: elements/Gravity_Form/element.php:1179
+#: elements/Gravity_Form/element.php:1244
+#: elements/Gravity_Form/element.php:1296
+#: elements/Gravity_Form/element.php:1553
+#: elements/Gravity_Form/element.php:1700
+#: elements/Gravity_Form/element.php:1966
+msgid "Borders"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:115
+msgid "Default Alignment"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:117
+#: elements/Gravity_Form/element.php:519
+#: elements/Gravity_Form/element.php:1900
+#: elements/Gravity_Form/element.php:2000
+msgid "Align Left"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:117
+#: elements/Gravity_Form/element.php:519
+#: elements/Gravity_Form/element.php:1900
+#: elements/Gravity_Form/element.php:2000
+msgid "Align Center"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:117
+#: elements/Gravity_Form/element.php:519
+#: elements/Gravity_Form/element.php:1900
+#: elements/Gravity_Form/element.php:2000
+msgid "Align Right"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:123
+msgid "Default Typography"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:128
+msgid "Row Gap"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:141
+#: elements/Gravity_Form/element.php:1259
+msgid "Header"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:154
+#: elements/Gravity_Form/element.php:232
+#: elements/Gravity_Form/element.php:1189
+msgid "Title"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:157
+#: elements/Gravity_Form/element.php:175
+#: elements/Gravity_Form/element.php:235
+#: elements/Gravity_Form/element.php:279
+#: elements/Gravity_Form/element.php:331
+#: elements/Gravity_Form/element.php:370
+#: elements/Gravity_Form/element.php:450
+#: elements/Gravity_Form/element.php:468
+#: elements/Gravity_Form/element.php:486
+#: elements/Gravity_Form/element.php:548
+#: elements/Gravity_Form/element.php:571
+#: elements/Gravity_Form/element.php:604
+#: elements/Gravity_Form/element.php:627
+#: elements/Gravity_Form/element.php:660
+#: elements/Gravity_Form/element.php:683
+#: elements/Gravity_Form/element.php:716
+#: elements/Gravity_Form/element.php:763
+#: elements/Gravity_Form/element.php:825
+#: elements/Gravity_Form/element.php:858
+#: elements/Gravity_Form/element.php:866
+#: elements/Gravity_Form/element.php:882
+#: elements/Gravity_Form/element.php:1037
+#: elements/Gravity_Form/element.php:1063
+#: elements/Gravity_Form/element.php:1106
+#: elements/Gravity_Form/element.php:1156
+#: elements/Gravity_Form/element.php:1197
+#: elements/Gravity_Form/element.php:1215
+#: elements/Gravity_Form/element.php:1286
+#: elements/Gravity_Form/element.php:1314
+#: elements/Gravity_Form/element.php:1335
+#: elements/Gravity_Form/element.php:1356
+#: elements/Gravity_Form/element.php:1377
+#: elements/Gravity_Form/element.php:1398
+#: elements/Gravity_Form/element.php:1419
+#: elements/Gravity_Form/element.php:1530
+#: elements/Gravity_Form/element.php:1558
+#: elements/Gravity_Form/element.php:1585
+#: elements/Gravity_Form/element.php:1606
+#: elements/Gravity_Form/element.php:1682
+#: elements/Gravity_Form/element.php:1713
+#: elements/Gravity_Form/element.php:1736
+#: elements/Gravity_Form/element.php:2006
+#: elements/Gravity_Form/element.php:2027
+msgid "Typography"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:172
+#: elements/Gravity_Form/element.php:478
+#: elements/Gravity_Form/element.php:1207
+#: elements/Gravity_Form/element.php:1621
+msgid "Description"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:195
+msgid "Required Indicators"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:198
+msgid "Indicator"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:203
+msgid "Legend"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:208
+msgid "Legend Margin"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:221
+msgid "Progress"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:224
+#: elements/Gravity_Form/element.php:1777
+msgid "Progress Bar"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:227
+#: elements/Gravity_Form/element.php:302
+msgid "Wrapper Spacing"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:250
+msgid "Percentage Bar"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:268
+#: elements/Gravity_Form/element.php:1804
+msgid "Percentage"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:271
+msgid "Show Percentage"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:307
+msgid "Step Spacing"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:312
+msgid "Pending Step"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:315
+#: elements/Gravity_Form/element.php:354
+#: elements/Gravity_Form/element.php:393
+msgid "Step Number"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:341
+#: elements/Gravity_Form/element.php:380
+#: elements/Gravity_Form/element.php:422
+msgid "Step Label"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:351
+msgid "Active Step"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:390
+msgid "Completed Step"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:409
+#: elements/Gravity_Form/element.php:1055
+#: elements/Gravity_Form/element.php:1124
+msgid "Checkmark"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:460
+msgid "Sub-Label"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:496
+msgid "Buttons"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:517
+#: elements/Gravity_Form/element.php:1998
+msgid "Alignment"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:530
+msgid "Submit"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:586
+msgid "Next"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:609
+#: elements/Gravity_Form/element.php:665
+msgid "Hover"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:642
+msgid "Previous"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:698
+msgid "Save"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:721
+#: elements/Gravity_Form/element.php:768
+#: elements/Gravity_Form/element.php:1472
+#: elements/Gravity_Form/element.php:1504
+#: elements/Gravity_Form/element.php:1645
+msgid "Icon"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:732
+#: elements/Gravity_Form/element.php:779
+#: elements/Gravity_Form/element.php:1127
+#: elements/Gravity_Form/element.php:1265
+#: elements/Gravity_Form/element.php:1653
+#: elements/Gravity_Form/element.php:1820
+#: elements/Gravity_Form/element.php:1857
+msgid "Color"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:807
+msgid "Inputs"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:830
+msgid "Placeholder"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:835
+#: elements/Gravity_Form/element.php:1073
+#: elements/Gravity_Form/element.php:1166
+msgid "Focus"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:845
+msgid "Select"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:863
+msgid "Option"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:879
+#: elements/Gravity_Form/element.php:1042
+#: elements/Gravity_Form/element.php:1111
+msgid "Checked"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1014
+msgid "Checkbox"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1143
+#: elements/Gravity_Form/element.php:1464
+#: elements/Gravity_Form/element.php:1496
+#: elements/Gravity_Form/element.php:1833
+msgid "Border Radius"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1176
+msgid "Section Break"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1230
+msgid "Datepicker"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1233
+#: elements/Gravity_Form/element.php:1982
+msgid "Icon Color"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1241
+msgid "Popup"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1262
+msgid "Arrows"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1283
+msgid "Dropdowns"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1311
+msgid "Weekday Header"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1332
+msgid "Date"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1353
+msgid "Date in Other Month"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1374
+msgid "Date in Weekend"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1395
+msgid "Selected Date"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1416
+msgid "Today"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1447
+msgid "List"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1450
+msgid "Icons"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1453
+msgid "Add"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1485
+msgid "Delete"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1522
+msgid "Column Headers"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1545
+msgid "Consent"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1568
+msgid "File Upload"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1571
+msgid "Single"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1574
+#: elements/Gravity_Form/element.php:1692
+msgid "Button"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1595
+msgid "Field"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1631
+msgid "Multi"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1634
+msgid "Drop Area"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1661
+#: elements/Gravity_Form/element.php:1812
+#: elements/Gravity_Form/element.php:1849
+msgid "Font Size"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1674
+msgid "Text"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1733
+msgid "Rules"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1751
+msgid "Uploaded Files"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1754
+msgid "List Gap"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1762
+msgid "Item Spacing"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1767
+msgid "File Name"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1772
+msgid "File Size"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1780
+#: presets/Size.php:15
+msgid "Height"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1788
+msgid "Bar Color"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1796
+msgid "Progress Color"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1809
+msgid "Completed Icon"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1846
+msgid "Delete Icon"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1885
+msgid "Products"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1888
+msgid "Price Label"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1893
+msgid "Price"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1898
+msgid "Price Alignment"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1906
+msgid "Price Width"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1914
+msgid "Shipping Price"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1919
+msgid "Total"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1929
+msgid "Validation"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1932
+msgid "Invalid Input"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1935
+msgid "Inline Error"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1940
+msgid "Input Borders"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1945
+msgid "Input Background"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1958
+msgid "Validation Summary"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1979
+msgid "Error Title"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:1990
+msgid "Icon Size"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2016
+msgid "Error List"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2024
+msgid "List Item"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2032
+msgid "Bullet Type"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Disc"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Decimal"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Square"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Circle"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Disclosure Open"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2034
+msgid "Disclosure Closed"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2065
+#: elements/Gravity_Form/element.php:2068
+msgid "Form"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2076
+msgid "Display Title"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2084
+msgid "Display Description"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2092
+msgid "Ajax"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2100
+msgid "Tab Index"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2108
+msgid "Specify Default Field Values"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2116
+msgid "Field Values"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2119
+msgid "Parameter"
+msgstr ""
+
+#: elements/Gravity_Form/element.php:2127
+msgid "Value"
+msgstr ""
+
+#: elements/Gravity_Form/ssr.php:4
+msgid "(some forms may not display in builder)"
+msgstr ""
+
+#: gravitydance.php:42
+msgid "Gravitydance Elements"
+msgstr ""
+
+#: gravitydance.php:50
+msgid "Gravitydance Macros"
+msgstr ""
+
+#: gravitydance.php:58
+msgid "Gravitydance Presets"
+msgstr ""
+
+#: presets/Size.php:23
+msgid "Max Height"
+msgstr ""
+
+#: presets/Size.php:31
+msgid "Width"
+msgstr ""
+
+#: presets/Size.php:39
+msgid "Max Width"
+msgstr ""

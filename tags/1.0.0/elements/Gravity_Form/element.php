@@ -61,7 +61,8 @@ class GravityForm extends \Breakdance\Elements\Element
 
     static function template()
     {
-        return file_get_contents(__DIR__ . '/html.twig');
+    	$template = '{% if isBuilder %}<div style="padding: 20px; background: repeating-linear-gradient(145deg, #eff6ff, #eff6ff 10px, #d8e3f9 10px, #d8e3f9 20px); width: 100%; color: black; font-weight: bold;">'.esc_html__('Gravity Form', 'gravitydance').'<br>'.esc_html__('(some forms may not display in builder)', 'gravitydance').'</div>{% endif %}';
+        return $template . file_get_contents(__DIR__ . '/html.twig');
     }
 
     static function defaultCss()
@@ -896,110 +897,6 @@ class GravityForm extends \Breakdance\Elements\Element
         false,
         [],
       )],
-        ['type' => 'section', 'layout' => 'inline', 'sectionOptions' => ['type' => 'popout']],
-        false,
-        false,
-        [],
-      )],
-        ['type' => 'section', 'layout' => 'inline', 'sectionOptions' => ['type' => 'popout']],
-        false,
-        false,
-        [],
-      ), c(
-        "enhanced_select",
-        esc_html_("Enhanced Select", 'gravitydance'),
-        [getPresetSection(
-      "EssentialElements\\borders",
-      esc_html_("Borders", 'gravitydance'),
-      "borders",
-       ['type' => 'popout']
-     ), getPresetSection(
-      "EssentialElements\\background",
-      esc_html("Background", 'gravitydance'),
-      "background",
-       ['type' => 'popout']
-     ), getPresetSection(
-      "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
-      "typography",
-       ['type' => 'popout']
-     ), c(
-        "option",
-        esc_html_("Option", 'gravitydance'),
-        [getPresetSection(
-      "EssentialElements\\typography_with_hoverable_color",
-      esc_html_("Typography", 'gravitydance'),
-      "typography",
-       ['type' => 'popout']
-     ), c(
-        "background",
-        esc_html_("Background", 'gravitydance'),
-        [],
-        ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
-        false,
-        true,
-        [],
-      ), c(
-        "checked",
-        esc_html_("Checked", 'gravitydance'),
-        [getPresetSection(
-      "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
-      "typography",
-       ['type' => 'popout']
-     ), c(
-        "background",
-        esc_html_("Background", 'gravitydance'),
-        [],
-        ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
-        false,
-        false,
-        [],
-      ), c(
-        "indicator",
-        esc_html_("Indicator", 'gravitydance'),
-        [],
-        ['type' => 'color', 'layout' => 'inline'],
-        false,
-        false,
-        [],
-      )],
-        ['type' => 'section', 'layout' => 'inline', 'sectionOptions' => ['type' => 'popout']],
-        false,
-        false,
-        [],
-      )],
-        ['type' => 'section', 'layout' => 'inline', 'sectionOptions' => ['type' => 'popout']],
-        false,
-        false,
-        [],
-      ), c(
-        "search_box",
-        esc_html_("Search Box", 'gravitydance'),
-        [getPresetSection(
-      "EssentialElements\\borders",
-      esc_html_("Borders", 'gravitydance'),
-      "borders",
-       ['type' => 'popout']
-     ), getPresetSection(
-      "EssentialElements\\borders",
-      esc_html_("Borders - Focus", 'gravitydance'),
-      "borders_focus",
-       ['type' => 'popout']
-     ), c(
-        "background",
-        esc_html_("Background", 'gravitydance'),
-        [],
-        ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
-        false,
-        false,
-        [],
-      ), getPresetSection(
-      "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
-      "typography",
-       ['type' => 'popout']
-     )],
         ['type' => 'section', 'layout' => 'inline', 'sectionOptions' => ['type' => 'popout']],
         false,
         false,
@@ -2140,30 +2037,6 @@ class GravityForm extends \Breakdance\Elements\Element
         false,
         false,
         [],
-      ), c(
-        "builder_label",
-        esc_html_("Builder Label", 'gravitydance'),
-        [c(
-        "hide_label",
-        esc_html_("Hide Label", 'gravitydance'),
-        [],
-        ['type' => 'toggle', 'layout' => 'vertical'],
-        false,
-        false,
-        [],
-      ), c(
-        "custom_label",
-        esc_html_("Custom Label", 'gravitydance'),
-        [],
-        ['type' => 'text', 'layout' => 'vertical', 'textOptions' => ['multiline' => true], 'condition' => ['0' => ['0' => ['path' => 'content.builder_label.hide_label', 'operand' => 'is not set', 'value' => '']]]],
-        false,
-        false,
-        [],
-      )],
-        ['type' => 'section', 'layout' => 'vertical'],
-        false,
-        false,
-        [],
       )];
     }
 
@@ -2219,7 +2092,7 @@ class GravityForm extends \Breakdance\Elements\Element
 
     static function dynamicPropertyPaths()
     {
-        return ['0' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '1' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '2' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '3' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '4' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '5' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '6' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '7' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '8' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '9' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '10' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '11' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '12' => ['accepts' => 'image_url', 'path' => 'design.wrapper.background.layers[].image'], '13' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '14' => ['accepts' => 'image_url', 'path' => 'design.progress_bar.percentage_bar.progress.layers[].image'], '15' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '16' => ['accepts' => 'image_url', 'path' => 'design.inputs.text_and_textarea.background.layers[].image'], '17' => ['accepts' => 'image_url', 'path' => 'design.inputs.background.layers[].image'], '18' => ['accepts' => 'image_url', 'path' => 'design.inputs.select.background.layers[].image'], '19' => ['accepts' => 'image_url', 'path' => 'design.inputs.select.option.background.layers[].image'], '20' => ['accepts' => 'image_url', 'path' => 'design.checkbox.background.layers[].image'], '21' => ['accepts' => 'image_url', 'path' => 'design.checkbox.checked.background.layers[].image'], '22' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.background.layers[].image'], '23' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.header.arrows.background.layers[].image'], '24' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.weekday_header.background.layers[].image'], '25' => ['accepts' => 'image_url', 'path' => 'design.file_upload.single.button.background.layers[].image'], '26' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '27' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '28' => ['accepts' => 'image_url', 'path' => 'design.buttons.button_section.background.layers[].image'], '29' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '30' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '31' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '32' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string']];
+        return ['0' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '1' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '2' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '3' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '4' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '5' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '6' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '7' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '8' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '9' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '10' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '11' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '12' => ['accepts' => 'image_url', 'path' => 'design.wrapper.background.layers[].image'], '13' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '14' => ['accepts' => 'image_url', 'path' => 'design.progress_bar.percentage_bar.progress.layers[].image'], '15' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '16' => ['accepts' => 'image_url', 'path' => 'design.inputs.text_and_textarea.background.layers[].image'], '17' => ['accepts' => 'image_url', 'path' => 'design.inputs.background.layers[].image'], '18' => ['accepts' => 'image_url', 'path' => 'design.inputs.select.background.layers[].image'], '19' => ['accepts' => 'image_url', 'path' => 'design.inputs.select.option.background.layers[].image'], '20' => ['accepts' => 'image_url', 'path' => 'design.checkbox.background.layers[].image'], '21' => ['accepts' => 'image_url', 'path' => 'design.checkbox.checked.background.layers[].image'], '22' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.background.layers[].image'], '23' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.header.arrows.background.layers[].image'], '24' => ['accepts' => 'image_url', 'path' => 'design.datepicker.popup.weekday_header.background.layers[].image'], '25' => ['accepts' => 'image_url', 'path' => 'design.file_upload.single.button.background.layers[].image'], '26' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '27' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string'], '28' => ['accepts' => 'image_url', 'path' => 'design.buttons.button_section.background.layers[].image'], '29' => ['path' => 'settings.advanced.attributes[].value', 'accepts' => 'string']];
     }
 
     static function additionalClasses()
@@ -2239,6 +2112,6 @@ class GravityForm extends \Breakdance\Elements\Element
 
     static function propertyPathsToSsrElementWhenValueChanges()
     {
-        return ['content.form.form', 'content.form.theme', 'content.form', 'content.form.tab_index', 'content.form.ajax', 'content.form.specify_default_field_values', 'content.form.field_values', 'content.form.field_values[].parameter', 'content.form.field_values[].value', 'design.wrapper.layout', 'design.wrapper', 'design.progress.steps.pending_step.step_number', 'design.progress.steps', 'content.label.custom_label', 'content.builder_label.custom_label', 'content.builder_label'];
+        return ['content.form.form', 'content.form.theme', 'content.form', 'content.form.tab_index', 'content.form.ajax', 'content.form.specify_default_field_values', 'content.form.field_values', 'content.form.field_values[].parameter', 'content.form.field_values[].value', 'design.wrapper.layout', 'design.wrapper', 'design.progress.steps.pending_step.step_number', 'design.progress.steps'];
     }
 }

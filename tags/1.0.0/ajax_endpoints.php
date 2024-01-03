@@ -18,8 +18,8 @@ function gravitydancegetforms(){
 	foreach ($forms as $form) {
 		$id = strval(rgar($form, 'id'));
 		$title = rgar($form, 'title');
-		/* translators: %1$s: form ID. %2$s: form title. */
-		$text = sprintf(esc_html__('#%1$s: %2$s', 'gravitydance'), $id, $title);
+		/* translators: %1s: form ID. %2s: form title. */
+		$text = sprintf(esc_html__('#%1s: %2s', 'gravitydance'), $id, $title);
 		$list[] = [
 			'value'	=> $id,
 			'text'	=> $text
