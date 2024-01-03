@@ -3,7 +3,7 @@
  * Plugin Name:			Gravitydance
  * Plugin URI:			https://github.com/bakkbone/gravitydance
  * Description:			Provides a Gravity Forms element for Breakdance.
- * Version:				1.0.0
+ * Version:				1.0.1
  * Requires at least:	6.0
  * Requires PHP:		7.4
  * Author:				BAKKBONE Australia

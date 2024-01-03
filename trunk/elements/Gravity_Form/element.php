@@ -907,10 +907,10 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "enhanced_select",
-        esc_html_("Enhanced Select", 'gravitydance'),
+        esc_html__("Enhanced Select", 'gravitydance'),
         [getPresetSection(
       "EssentialElements\\borders",
-      esc_html_("Borders", 'gravitydance'),
+      esc_html__("Borders", 'gravitydance'),
       "borders",
        ['type' => 'popout']
      ), getPresetSection(
@@ -920,20 +920,20 @@ class GravityForm extends \Breakdance\Elements\Element
        ['type' => 'popout']
      ), getPresetSection(
       "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
+      esc_html__("Typography", 'gravitydance'),
       "typography",
        ['type' => 'popout']
      ), c(
         "option",
-        esc_html_("Option", 'gravitydance'),
+        esc_html__("Option", 'gravitydance'),
         [getPresetSection(
       "EssentialElements\\typography_with_hoverable_color",
-      esc_html_("Typography", 'gravitydance'),
+      esc_html__("Typography", 'gravitydance'),
       "typography",
        ['type' => 'popout']
      ), c(
         "background",
-        esc_html_("Background", 'gravitydance'),
+        esc_html__("Background", 'gravitydance'),
         [],
         ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
         false,
@@ -941,15 +941,15 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "checked",
-        esc_html_("Checked", 'gravitydance'),
+        esc_html__("Checked", 'gravitydance'),
         [getPresetSection(
       "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
+      esc_html__("Typography", 'gravitydance'),
       "typography",
        ['type' => 'popout']
      ), c(
         "background",
-        esc_html_("Background", 'gravitydance'),
+        esc_html__("Background", 'gravitydance'),
         [],
         ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
         false,
@@ -957,7 +957,7 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "indicator",
-        esc_html_("Indicator", 'gravitydance'),
+        esc_html__("Indicator", 'gravitydance'),
         [],
         ['type' => 'color', 'layout' => 'inline'],
         false,
@@ -975,20 +975,20 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "search_box",
-        esc_html_("Search Box", 'gravitydance'),
+        esc_html__("Search Box", 'gravitydance'),
         [getPresetSection(
       "EssentialElements\\borders",
-      esc_html_("Borders", 'gravitydance'),
+      esc_html__("Borders", 'gravitydance'),
       "borders",
        ['type' => 'popout']
      ), getPresetSection(
       "EssentialElements\\borders",
-      esc_html_("Borders - Focus", 'gravitydance'),
+      esc_html__("Borders - Focus", 'gravitydance'),
       "borders_focus",
        ['type' => 'popout']
      ), c(
         "background",
-        esc_html_("Background", 'gravitydance'),
+        esc_html__("Background", 'gravitydance'),
         [],
         ['type' => 'color', 'layout' => 'inline', 'colorOptions' => ['type' => 'solidAndGradient']],
         false,
@@ -996,7 +996,7 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), getPresetSection(
       "EssentialElements\\typography",
-      esc_html_("Typography", 'gravitydance'),
+      esc_html__("Typography", 'gravitydance'),
       "typography",
        ['type' => 'popout']
      )],
@@ -2142,10 +2142,10 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "builder_label",
-        esc_html_("Builder Label", 'gravitydance'),
+        esc_html__("Builder Label", 'gravitydance'),
         [c(
         "hide_label",
-        esc_html_("Hide Label", 'gravitydance'),
+        esc_html__("Hide Label", 'gravitydance'),
         [],
         ['type' => 'toggle', 'layout' => 'vertical'],
         false,
@@ -2153,7 +2153,7 @@ class GravityForm extends \Breakdance\Elements\Element
         [],
       ), c(
         "custom_label",
-        esc_html_("Custom Label", 'gravitydance'),
+        esc_html__("Custom Label", 'gravitydance'),
         [],
         ['type' => 'text', 'layout' => 'vertical', 'textOptions' => ['multiline' => true], 'condition' => ['0' => ['0' => ['path' => 'content.builder_label.hide_label', 'operand' => 'is not set', 'value' => '']]]],
         false,

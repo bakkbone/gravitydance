@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License (GPL) 3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravitydance 1.0.0\n"
+"Project-Id-Version: Gravitydance 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gravitydance\n"
-"POT-Creation-Date: 2024-01-03T06:20:06+00:00\n"
-"PO-Revision-Date: 2024-01-03 14:22+0800\n"
+"POT-Creation-Date: 2024-01-03T09:52:02+00:00\n"
+"PO-Revision-Date: 2024-01-03 17:53+0800\n"
 "Last-Translator: Scott @ BAKKBONE Australia <s.landers@bakkbone.com.au>\n"
 "Language-Team: \n"
 "Language: en_AU\n"
@@ -95,7 +95,9 @@ msgstr "Spacing"
 #: elements/Gravity_Form/element.php:362 elements/Gravity_Form/element.php:401
 #: elements/Gravity_Form/element.php:512 elements/Gravity_Form/element.php:820
 #: elements/Gravity_Form/element.php:853 elements/Gravity_Form/element.php:871
-#: elements/Gravity_Form/element.php:887 elements/Gravity_Form/element.php:1032
+#: elements/Gravity_Form/element.php:887 elements/Gravity_Form/element.php:936
+#: elements/Gravity_Form/element.php:952 elements/Gravity_Form/element.php:991
+#: elements/Gravity_Form/element.php:1032
 #: elements/Gravity_Form/element.php:1045
 #: elements/Gravity_Form/element.php:1101
 #: elements/Gravity_Form/element.php:1114
@@ -125,6 +127,7 @@ msgstr "Background"
 #: elements/Gravity_Form/element.php:645 elements/Gravity_Form/element.php:668
 #: elements/Gravity_Form/element.php:701 elements/Gravity_Form/element.php:748
 #: elements/Gravity_Form/element.php:815 elements/Gravity_Form/element.php:848
+#: elements/Gravity_Form/element.php:913 elements/Gravity_Form/element.php:981
 #: elements/Gravity_Form/element.php:1017
 #: elements/Gravity_Form/element.php:1050
 #: elements/Gravity_Form/element.php:1086
@@ -187,7 +190,9 @@ msgstr "Title"
 #: elements/Gravity_Form/element.php:683 elements/Gravity_Form/element.php:716
 #: elements/Gravity_Form/element.php:763 elements/Gravity_Form/element.php:825
 #: elements/Gravity_Form/element.php:858 elements/Gravity_Form/element.php:866
-#: elements/Gravity_Form/element.php:882 elements/Gravity_Form/element.php:1037
+#: elements/Gravity_Form/element.php:882 elements/Gravity_Form/element.php:923
+#: elements/Gravity_Form/element.php:931 elements/Gravity_Form/element.php:947
+#: elements/Gravity_Form/element.php:999 elements/Gravity_Form/element.php:1037
 #: elements/Gravity_Form/element.php:1063
 #: elements/Gravity_Form/element.php:1106
 #: elements/Gravity_Form/element.php:1156
@@ -222,7 +227,7 @@ msgstr "Description"
 msgid "Required Indicators"
 msgstr "Required Indicators"
 
-#: elements/Gravity_Form/element.php:198
+#: elements/Gravity_Form/element.php:198 elements/Gravity_Form/element.php:960
 msgid "Indicator"
 msgstr "Indicator"
 
@@ -354,14 +359,28 @@ msgstr "Focus"
 msgid "Select"
 msgstr "Select"
 
-#: elements/Gravity_Form/element.php:863
+#: elements/Gravity_Form/element.php:863 elements/Gravity_Form/element.php:928
 msgid "Option"
 msgstr "Option"
 
-#: elements/Gravity_Form/element.php:879 elements/Gravity_Form/element.php:1042
+#: elements/Gravity_Form/element.php:879 elements/Gravity_Form/element.php:944
+#: elements/Gravity_Form/element.php:1042
 #: elements/Gravity_Form/element.php:1111
 msgid "Checked"
 msgstr "Checked"
+
+#: elements/Gravity_Form/element.php:910
+msgid "Enhanced Select"
+msgstr "Enhanced Select"
+
+#: elements/Gravity_Form/element.php:978
+msgid "Search Box"
+msgstr "Search Box"
+
+#: elements/Gravity_Form/element.php:986
+#| msgid "Border Radius"
+msgid "Borders - Focus"
+msgstr "Borders - Focus"
 
 #: elements/Gravity_Form/element.php:1014
 msgid "Checkbox"
@@ -658,6 +677,20 @@ msgstr "Parameter"
 #: elements/Gravity_Form/element.php:2127
 msgid "Value"
 msgstr "Value"
+
+#: elements/Gravity_Form/element.php:2145
+msgid "Builder Label"
+msgstr "Builder Label"
+
+#: elements/Gravity_Form/element.php:2148
+#| msgid "Price Label"
+msgid "Hide Label"
+msgstr "Hide Label"
+
+#: elements/Gravity_Form/element.php:2156
+#| msgid "Step Label"
+msgid "Custom Label"
+msgstr "Custom Label"
 
 #: elements/Gravity_Form/ssr.php:4
 msgid "(some forms may not display in builder)"
