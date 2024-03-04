@@ -1,0 +1,6 @@
+{% macro gdsize(size) %}
+  width: {{ size.width.style }};
+  max-width: {{ size.max_width.style }};
+  height: {{ size.height.style }};
+  max-height: {{ size.max_height.style }};
+{% endmacro %}
