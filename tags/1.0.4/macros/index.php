@@ -1,0 +1,2 @@
+<?php
+// Ah, sweet silence.
